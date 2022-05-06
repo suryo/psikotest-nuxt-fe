@@ -32,8 +32,8 @@
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/papi/test"
-            ><i class="far fa-square"></i> <span>Papi</span></nuxt-link
+          <nuxt-link class="nav-link" to="/papi/first"
+            ><i class="far fa-square"></i> <span>PAPI</span></nuxt-link
           >
         </li>
         <li>
