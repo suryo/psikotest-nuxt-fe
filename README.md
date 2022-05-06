@@ -25,6 +25,7 @@ $ yarn generate
 ## Page
 1. PAPI
 2. RIASEC
+3. TIU
 
 ## Author
 Suryo Atmojo <suryoatm@gmail.com>
