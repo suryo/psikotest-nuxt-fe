@@ -3,6 +3,7 @@
 ## REQUIREMENT
 1. node 16.14.*
 2. yarn 1.22.*
+3. [backend psikotest-laravel-api] (https://github.com/suryo/psikotest-laravel-api) 
 
 ## Build Setup
 
