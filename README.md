@@ -21,3 +21,9 @@ $ yarn start
 $ yarn generate
 ```
 
+## Page
+1. PAPI
+2. RIASEC
+
+## Author
+Suryo Atmojo <suryoatm@gmail.com>
