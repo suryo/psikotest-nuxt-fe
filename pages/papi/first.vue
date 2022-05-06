@@ -9,6 +9,7 @@
                 Pada test ini terdapat 90 pertanyaan. Anda harus... JANGAN TEKAN
                 TOMBOL SEBELUM DI INSTRUKSIKAN
               </h4>
+               <img src="~/assets/img/logo4.png" />
             </div>
             <div class="card-body">
               <div class="form-group">
