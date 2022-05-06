@@ -32,12 +32,17 @@
           >
         </li>
         <li>
+          <nuxt-link class="nav-link" to="/tiu/first"
+            ><i class="far fa-square"></i> <span>TIU</span></nuxt-link
+          >
+        </li>
+        <li>
           <nuxt-link class="nav-link" to="/papi/first"
             ><i class="far fa-square"></i> <span>PAPI</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/coba2/"
+          <nuxt-link class="nav-link" to="/riasec/first"
             ><i class="far fa-square"></i> <span>RIASEC</span></nuxt-link
           >
         </li>
