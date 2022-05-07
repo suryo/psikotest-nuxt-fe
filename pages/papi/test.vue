@@ -15,7 +15,6 @@
                 class="needs-validation"
                 novalidate=""
               >
-                
                 <div class="form-group">
                   <label>1.</label>
                   <ul>
@@ -1231,7 +1230,7 @@ export default {
       jwb88: "",
       jwb89: "",
       jwb90: "",
-
+      no_pendaftaran: "565656565656",
       provinsi: {
         provinsi: "",
       },
@@ -1240,25 +1239,140 @@ export default {
     };
   },
 
+  mounted() {
+    console.log("coba");
+    this.$axios
+      .get("/api/papi")
+      .then((response) => {
+        //assign response ke state "posts"
+        this.posts = response.data.data;
+        console.log(this.posts);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  },
+
   methods: {
     //method "store"
     async store(e) {
       e.preventDefault();
 
-      //send data ke Rest API
-      await this.$axios
-        .post("/api/provinsi", {
-          //data yang dikirim ke server
-          provinsi: this.provinsi.provinsi,
-        })
+      var obj = {
+        no_pendaftaran: [],
+      };
+
+      obj.no_pendaftaran.push("456789123");
+      let datax = {
+        data: [
+          {
+            no_pendaftaran: this.no_pendaftaran,
+            jwb1: this.jwb1,
+            jwb2: this.jwb2,
+            jwb3: this.jwb3,
+            jwb4: this.jwb4,
+            jwb5: this.jwb5,
+            jwb6: this.jwb6,
+            jwb7: this.jwb7,
+            jwb8: this.jwb8,
+            jwb9: this.jwb9,
+            jwb10: this.jwb10,
+            jwb11: this.jwb11,
+            jwb12: this.jwb12,
+            jwb13: this.jwb13,
+            jwb14: this.jwb14,
+            jwb15: this.jwb15,
+            jwb16: this.jwb16,
+            jwb17: this.jwb17,
+            jwb18: this.jwb18,
+            jwb19: this.jwb19,
+            jwb20: this.jwb20,
+            jwb21: this.jwb21,
+            jwb22: this.jwb22,
+            jwb23: this.jwb23,
+            jwb24: this.jwb24,
+            jwb25: this.jwb25,
+            jwb26: this.jwb26,
+            jwb27: this.jwb27,
+            jwb28: this.jwb28,
+            jwb29: this.jwb29,
+            jwb30: this.jwb30,
+            jwb31: this.jwb31,
+            jwb32: this.jwb32,
+            jwb33: this.jwb33,
+            jwb34: this.jwb34,
+            jwb35: this.jwb35,
+            jwb36: this.jwb36,
+            jwb37: this.jwb37,
+            jwb38: this.jwb38,
+            jwb39: this.jwb39,
+            jwb40: this.jwb40,            
+            jwb41: this.jwb41,            
+            jwb42: this.jwb42,            
+            jwb43: this.jwb43,            
+            jwb44: this.jwb44,            
+            jwb45: this.jwb45,            
+            jwb46: this.jwb46,            
+            jwb47: this.jwb47,            
+            jwb48: this.jwb48,            
+            jwb49: this.jwb49,            
+            jwb50: this.jwb50,            
+            jwb51: this.jwb51,            
+            jwb52: this.jwb52,            
+            jwb53: this.jwb53,            
+            jwb54: this.jwb54,            
+            jwb55: this.jwb55,            
+            jwb56: this.jwb56,            
+            jwb57: this.jwb57,            
+            jwb58: this.jwb58,            
+            jwb59: this.jwb59,            
+            jwb60: this.jwb60,            
+            jwb61: this.jwb61,            
+            jwb62: this.jwb62,
+            jwb63: this.jwb63,
+            jwb64: this.jwb64,
+            jwb65: this.jwb65,
+            jwb66: this.jwb66,
+            jwb67: this.jwb67,
+            jwb68: this.jwb68,
+            jwb69: this.jwb69,
+            jwb70: this.jwb70,
+            jwb71: this.jwb71,
+            jwb72: this.jwb72,
+            jwb73: this.jwb73,
+            jwb74: this.jwb74,
+            jwb75: this.jwb75,
+            jwb76: this.jwb76,
+            jwb77: this.jwb77,
+            jwb78: this.jwb78,
+            jwb79: this.jwb79,
+            jwb80: this.jwb80,
+            jwb81: this.jwb81,
+            jwb82: this.jwb82,
+            jwb83: this.jwb83,
+            jwb84: this.jwb84,
+            jwb85: this.jwb85,
+            jwb86: this.jwb86,
+            jwb87: this.jwb87,
+            jwb88: this.jwb88,
+            jwb89: this.jwb89,
+            jwb90: this.jwb90
+          },
+        ],
+      };
+
+      await this.$axios({
+        method: "post",
+        headers: { "content-type": "application/json" },
+        url: "/api/papi",
+        data: datax,
+      })
         .then(() => {
-          //redirect ke route "post"
           this.$router.push({
-            name: "provinsi",
+            name: "papi",
           });
         })
         .catch((error) => {
-          //assign validation
           this.validation = error.response.data;
         });
     },
