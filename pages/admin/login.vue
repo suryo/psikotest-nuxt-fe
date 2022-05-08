@@ -151,6 +151,7 @@ export default {
             // console.log(res.data.status);
             localStorage.username = username;
             localStorage.id = res.data.id;
+            localStorage.no_pendaftaran = res.data.no_pendaftaran;
             
             this.$router.push({
               name: "dashboard",

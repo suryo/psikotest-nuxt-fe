@@ -1230,7 +1230,7 @@ export default {
       jwb88: "",
       jwb89: "",
       jwb90: "",
-      no_pendaftaran: "565656565656",
+      no_pendaftaran: "",
       provinsi: {
         provinsi: "",
       },
@@ -1240,17 +1240,18 @@ export default {
   },
 
   mounted() {
+    this.no_pendaftaran = localStorage.no_pendaftaran
     console.log("coba");
-    this.$axios
-      .get("/api/papi")
-      .then((response) => {
-        //assign response ke state "posts"
-        this.posts = response.data.data;
-        console.log(this.posts);
-      })
-      .catch((error) => {
-        console.log(error.response.data);
-      });
+    // this.$axios
+    //   .get("/api/papi")
+    //   .then((response) => {
+    //     //assign response ke state "posts"
+    //     this.posts = response.data.data;
+    //     console.log(this.posts);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.response.data);
+    //   });
   },
 
   methods: {

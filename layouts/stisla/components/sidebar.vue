@@ -2,7 +2,7 @@
   <div class="main-sidebar">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <nuxt-link to="/dashboard">Nuxt-Tutorial {{this.login.username}} [{{this.login.id}}]</nuxt-link>
+        <nuxt-link to="/dashboard">Nuxt-Tutorial {{this.login.username}} [{{this.login.id}}]{{this.login.no_pendaftaran}}</nuxt-link>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
         <a href="index.html">DASHBOARD</a>
@@ -59,45 +59,22 @@
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/coba1/"
-            ><i class="far fa-square"></i> <span>Coba1</span></nuxt-link
+          <nuxt-link class="nav-link" to="/tiu/"
+            ><i class="far fa-square"></i> <span>TIU</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/coba2/"
-            ><i class="far fa-square"></i> <span>Coba2</span></nuxt-link
+          <nuxt-link class="nav-link" to="/papi/"
+            ><i class="far fa-square"></i> <span>PAPI</span></nuxt-link
           >
         </li>
         <li>
-          <nuxt-link class="nav-link" to="/provinsi/"
-            ><i class="far fa-square"></i> <span>Provinsi</span></nuxt-link
+          <nuxt-link class="nav-link" to="/riasec/"
+            ><i class="far fa-square"></i> <span>RIASEC</span></nuxt-link
           >
         </li>
-        <li>
-          <nuxt-link class="nav-link" to="/kabupaten/"
-            ><i class="far fa-square"></i> <span>Kabupaten</span></nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link class="nav-link" to="/kota/"
-            ><i class="far fa-square"></i> <span>Kota</span></nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link class="nav-link" to="/kecamatan/"
-            ><i class="far fa-square"></i> <span>Kecamatan</span></nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link class="nav-link" to="/desa/"
-            ><i class="far fa-square"></i> <span>desa</span></nuxt-link
-          >
-        </li>
-                <li>
-          <nuxt-link class="nav-link" to="/desa/"
-            ><i class="far fa-square"></i> <span>ainur</span></nuxt-link
-          >
-        </li>
+
+      
         <li>
           <nuxt-link class="nav-link has-icon text-danger" to="/logout"
             ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></nuxt-link
@@ -118,6 +95,7 @@ export default {
         id:"",
         username: "",
         password: "",
+        no_pendaftaran: "",
       },
       //state validation
       validation: [],
@@ -128,6 +106,7 @@ export default {
       console.log(localStorage.username);
       this.login.username = localStorage.username
       this.login.id = localStorage.id
+      this.login.no_pendaftaran = localStorage.no_pendaftaran
     }
   },
   methods: {
