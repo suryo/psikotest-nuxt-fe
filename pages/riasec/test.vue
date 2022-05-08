@@ -39,7 +39,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>
                         Saya Menyukai Hal Hal Yang Berkaitan Dengan Otomotif
                       </td>
-                      <td><input type="text" id="riasec1" name="riasec1" class="form-control"></td>
+                      <td><input type="text" id="riasec1" name="riasec1" v-model="jawab1" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -51,7 +51,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>Saya menyukai teka - teki</td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec2" name="riasec2" class="form-control"></td>
+                        <input type="text" id="riasec2" name="riasec2" v-model="jawab2" class="form-control"></td>
                         <td></td>
                      
                       <td></td>
@@ -63,7 +63,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>Saya bisa bekerja secara mandiri</td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec3" name="riasec3" class="form-control"></td>
+                      <td><input type="text" id="riasec3" name="riasec3" v-model="jawab3" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -74,7 +74,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec4" name="riasec4" class="form-control"></td>
+                      <td><input type="text" id="riasec4" name="riasec4" v-model="jawab4" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -88,7 +88,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec5" name="riasec5" class="form-control"></td>
+                      <td><input type="text" id="riasec5" name="riasec5" v-model="jawab5" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
@@ -102,12 +102,12 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec6" name="riasec6" class="form-control"></td>
+                      <td><input type="text" id="riasec6" name="riasec6" v-model="jawab6" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>7</td>
                       <td>Saya suka merancang sesuatu</td>
-                      <td><input type="text" id="riasec7" name="riasec7" class="form-control"></td>
+                      <td><input type="text" id="riasec7" name="riasec7" v-model="jawab7" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -122,7 +122,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       </td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec8" name="riasec8" class="form-control"></td>
+                      <td><input type="text" id="riasec8" name="riasec8" v-model="jawab8" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -135,7 +135,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td></td>
-                      <td><input type="text" id="riasec9" name="riasec9" class="form-control"></td>
+                      <td><input type="text" id="riasec9" name="riasec9" v-model="jawab9" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>10</td>
@@ -145,7 +145,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec10" name="riasec10" class="form-control"></td>
+                        <input type="text" id="riasec10" name="riasec10" v-model="jawab10" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
@@ -153,7 +153,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>Saya suka melakukan eksperimen</td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec11" name="riasec11" class="form-control"></td>
+                        <input type="text" id="riasec11" name="riasec11" v-model="jawab11" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -169,7 +169,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec12" name="riasec12" class="form-control"></td>
+                        <input type="text" id="riasec12" name="riasec12" v-model="jawab12" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -183,7 +183,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec13" name="riasec13" class="form-control"></td>
+                        <input type="text" id="riasec13" name="riasec13" v-model="jawab13" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -191,7 +191,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>14</td>
                       <td>Saya suka merawat binatang</td>
                       <td>
-                        <input type="text" id="riasec14" name="riasec14" class="form-control"></td>
+                        <input type="text" id="riasec14" name="riasec14" v-model="jawab14" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -210,7 +210,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec15" name="riasec15" class="form-control"></td>
+                        <input type="text" id="riasec15" name="riasec15" v-model="jawab15" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>16</td>
@@ -220,7 +220,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec16" name="riasec16" class="form-control"></td>
+                        <input type="text" id="riasec16" name="riasec16" v-model="jawab16" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
@@ -229,7 +229,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec17" name="riasec17" class="form-control"></td>
+                        <input type="text" id="riasec17" name="riasec17" v-model="jawab17" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -242,7 +242,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       </td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec18" name="riasec18" class="form-control"></td>
+                        <input type="text" id="riasec18" name="riasec18" v-model="jawab18" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -256,7 +256,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec19" name="riasec19" class="form-control"></td>
+                        <input type="text" id="riasec19" name="riasec19" v-model="jawab19" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
@@ -269,7 +269,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec20" name="riasec20" class="form-control"></td>
+                        <input type="text" id="riasec20" name="riasec20" v-model="jawab20" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -281,7 +281,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       </td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec21" name="riasec21" class="form-control"></td>
+                        <input type="text" id="riasec21" name="riasec21" v-model="jawab21" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -291,7 +291,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>22</td>
                       <td>Saya suka merakit dan merangkai sesuatu</td>
                       <td>
-                        <input type="text" id="riasec22" name="riasec22" class="form-control"></td>
+                        <input type="text" id="riasec22" name="riasec22" v-model="jawab22" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -304,7 +304,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec23" name="riasec23" class="form-control"></td>
+                        <input type="text" id="riasec23" name="riasec23" v-model="jawab23" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -318,7 +318,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec24" name="riasec24" class="form-control"></td>
+                        <input type="text" id="riasec24" name="riasec24" v-model="jawab24" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>25</td>
@@ -331,7 +331,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec25" name="riasec25" class="form-control"></td>
+                        <input type="text" id="riasec25" name="riasec25" v-model="jawab25" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>26</td>
@@ -340,7 +340,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       </td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec26" name="riasec26" class="form-control"></td>
+                        <input type="text" id="riasec26" name="riasec26" v-model="jawab26" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -352,7 +352,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec27" name="riasec27" class="form-control"></td>
+                        <input type="text" id="riasec27" name="riasec27" v-model="jawab27" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -364,7 +364,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec28" name="riasec28" class="form-control"></td>
+                        <input type="text" id="riasec28" name="riasec28" v-model="jawab28" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -376,14 +376,14 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec29" name="riasec29" class="form-control"></td>
+                        <input type="text" id="riasec29" name="riasec29" v-model="jawab29" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
                       <td>30</td>
                       <td>Saya suka memasak</td>
                       <td>
-                        <input type="text" id="riasec30" name="riasec30" class="form-control"></td>
+                        <input type="text" id="riasec30" name="riasec30" v-model="jawab30" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -396,7 +396,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec31" name="riasec31" class="form-control"></td>
+                        <input type="text" id="riasec31" name="riasec31" v-model="jawab31" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -405,7 +405,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>32</td>
                       <td>Saya orang yang praktis</td>
                       <td>
-                        <input type="text" id="riasec32" name="riasec32" class="form-control"></td>
+                        <input type="text" id="riasec32" name="riasec32" v-model="jawab32" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -417,7 +417,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td>Saya suka bekerja dengan angka atau grafik</td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec33" name="riasec33" class="form-control"></td>
+                        <input type="text" id="riasec33" name="riasec33" v-model="jawab33" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -430,7 +430,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec34" name="riasec34" class="form-control"></td>
+                        <input type="text" id="riasec34" name="riasec34" v-model="jawab34" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -446,7 +446,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec35" name="riasec35" class="form-control"></td>
+                        <input type="text" id="riasec35" name="riasec35" v-model="jawab35" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>36</td>
@@ -456,14 +456,14 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec36" name="riasec36" class="form-control"></td>
+                        <input type="text" id="riasec36" name="riasec36" v-model="jawab36" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
                       <td>37</td>
                       <td>Saya suka bekerja di luar ruangan</td>
                       <td>
-                        <input type="text" id="riasec37" name="riasec37" class="form-control"></td>
+                        <input type="text" id="riasec37" name="riasec37" v-model="jawab37" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -479,14 +479,14 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec38" name="riasec38" class="form-control"></td>
+                        <input type="text" id="riasec38" name="riasec38" v-model="jawab38" class="form-control"></td>
                     </tr>
                     <tr>
                       <td>39</td>
                       <td>Saya pandai matematika</td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec39" name="riasec39" class="form-control"></td>
+                        <input type="text" id="riasec39" name="riasec39" v-model="jawab39" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -499,7 +499,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec40" name="riasec40" class="form-control"></td>
+                        <input type="text" id="riasec40" name="riasec40" v-model="jawab40" class="form-control"></td>
                       <td></td>
                       <td></td>
                     </tr>
@@ -509,7 +509,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec41" name="riasec41" class="form-control"></td>
+                        <input type="text" id="riasec41" name="riasec41" v-model="jawab41" class="form-control"></td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -522,7 +522,7 @@ jika tidak setuju dengan pernyataan tersebut, maka anda tidak perlu memberikan t
                       <td></td>
                       <td></td>
                       <td>
-                        <input type="text" id="riasec42" name="riasec42" class="form-control"></td>
+                        <input type="text" id="riasec42" name="riasec42" v-model="jawab42" class="form-control"></td>
                       <td></td>
                     </tr>
                     <tr>
@@ -576,124 +576,144 @@ export default {
   data() {
     return {
       //state post
-      jwb1: "",
-      jwb2: "",
-      jwb3: "",
-      jwb4: "",
-      jwb5: "",
-      jwb6: "",
-      jwb7: "",
-      jwb8: "",
-      jwb9: "",
-      jwb10: "",
-      jwb11: "",
-      jwb12: "",
-      jwb13: "",
-      jwb14: "",
-      jwb15: "",
-      jwb16: "",
-      jwb17: "",
-      jwb18: "",
-      jwb19: "",
-      jwb20: "",
-      jwb21: "",
-      jwb22: "",
-      jwb23: "",
-      jwb24: "",
-      jwb25: "",
-      jwb26: "",
-      jwb27: "",
-      jwb28: "",
-      jwb29: "",
-      jwb30: "",
-      jwb31: "",
-      jwb32: "",
-      jwb33: "",
-      jwb34: "",
-      jwb35: "",
-      jwb36: "",
-      jwb37: "",
-      jwb38: "",
-      jwb39: "",
-      jwb40: "",
-      jwb41: "",
-      jwb42: "",
-      jwb43: "",
-      jwb44: "",
-      jwb45: "",
-      jwb46: "",
-      jwb47: "",
-      jwb48: "",
-      jwb49: "",
-      jwb50: "",
-      jwb51: "",
-      jwb52: "",
-      jwb53: "",
-      jwb54: "",
-      jwb55: "",
-      jwb56: "",
-      jwb57: "",
-      jwb58: "",
-      jwb59: "",
-      jwb60: "",
-      jwb61: "",
-      jwb62: "",
-      jwb63: "",
-      jwb64: "",
-      jwb65: "",
-      jwb66: "",
-      jwb67: "",
-      jwb68: "",
-      jwb69: "",
-      jwb70: "",
-      jwb71: "",
-      jwb72: "",
-      jwb73: "",
-      jwb74: "",
-      jwb75: "",
-      jwb76: "",
-      jwb77: "",
-      jwb78: "",
-      jwb79: "",
-      jwb80: "",
-      jwb81: "",
-      jwb82: "",
-      jwb83: "",
-      jwb84: "",
-      jwb85: "",
-      jwb86: "",
-      jwb87: "",
-      jwb88: "",
-      jwb89: "",
-      jwb90: "",
+      jawab1: "",
+      jawab2: "",
+      jawab3: "",
+      jawab4: "",
+      jawab5: "",
+      jawab6: "",
+      jawab7: "",
+      jawab8: "",
+      jawab9: "",
+      jawab10: "",
+      jawab11: "",
+      jawab12: "",
+      jawab13: "",
+      jawab14: "",
+      jawab15: "",
+      jawab16: "",
+      jawab17: "",
+      jawab18: "",
+      jawab19: "",
+      jawab20: "",
+      jawab21: "",
+      jawab22: "",
+      jawab23: "",
+      jawab24: "",
+      jawab25: "",
+      jawab26: "",
+      jawab27: "",
+      jawab28: "",
+      jawab29: "",
+      jawab30: "",
+      jawab31: "",
+      jawab32: "",
+      jawab33: "",
+      jawab34: "",
+      jawab35: "",
+      jawab36: "",
+      jawab37: "",
+      jawab38: "",
+      jawab39: "",
+      jawab40: "",
+      jawab41: "",
+      jawab42: "",
+      no_pendaftaran: "",
 
-      provinsi: {
-        provinsi: "",
-      },
+     
       //state validation
       validation: [],
     };
   },
 
+   mounted() {
+    this.no_pendaftaran = localStorage.no_pendaftaran
+    console.log("run on tiu test");
+    // let endPoint = `/api/papiuserresult/no_pendaftaran=${this.no_pendaftaran}`;
+    // this.$axios
+    //   .$get(endPoint)
+    //   .then((response) => {
+    //     if (res.data.status == "ok") {
+    //       this.status = "disable";
+    //     }
+    //     else{
+    //       this.status = "enable"
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.response.data);
+    //   });
+  },
+
   methods: {
-    //method "store"
     async store(e) {
       e.preventDefault();
+      var obj = {
+        no_pendaftaran: [],
+      };
+      obj.no_pendaftaran.push("456789123");
+      let datax = {
+        data: [
+          {
+            no_pendaftaran: this.no_pendaftaran,
+            jawab1: this.jawab1,
+            jawab2: this.jawab2,
+            jawab3: this.jawab3,
+            jawab4: this.jawab4,
+            jawab5: this.jawab5,
+            jawab6: this.jawab6,
+            jawab7: this.jawab7,
+            jawab8: this.jawab8,
+            jawab9: this.jawab9,
+            jawab10: this.jawab10,
+            jawab11: this.jawab11,
+            jawab12: this.jawab12,
+            jawab13: this.jawab13,
+            jawab14: this.jawab14,
+            jawab15: this.jawab15,
+            jawab16: this.jawab16,
+            jawab17: this.jawab17,
+            jawab18: this.jawab18,
+            jawab19: this.jawab19,
+            jawab20: this.jawab20,
+            jawab21: this.jawab21,
+            jawab22: this.jawab22,
+            jawab23: this.jawab23,
+            jawab24: this.jawab24,
+            jawab25: this.jawab25,
+            jawab26: this.jawab26,
+            jawab27: this.jawab27,
+            jawab28: this.jawab28,
+            jawab29: this.jawab29,
+            jawab30: this.jawab30,
+            jawab31: this.jawab31,
+            jawab32: this.jawab32,
+            jawab33: this.jawab33,
+            jawab34: this.jawab34,
+            jawab35: this.jawab35,
+            jawab36: this.jawab36,
+            jawab37: this.jawab37,
+            jawab38: this.jawab38,
+            jawab39: this.jawab39,
+            jawab40: this.jawab40,            
+            jawab41: this.jawab41,            
+            jawab42: this.jawab42
+          },
+        ],
+      };
 
-      //send data ke Rest API
-      await this.$axios
-        .post("/api/provinsi", {
-          //data yang dikirim ke server
-          provinsi: this.provinsi.provinsi,
-        })
+      await this.$axios({
+        method: "post",
+        headers: { "content-type": "application/json" },
+        url: "/api/riasec",
+        data: datax,
+      })
         .then(() => {
-          //redirect ke route "post"
           this.$router.push({
-            name: "provinsi",
+            name: "riasec",
           });
         })
         .catch((error) => {
-          //assign validation
           this.validation = error.response.data;
         });
     },
