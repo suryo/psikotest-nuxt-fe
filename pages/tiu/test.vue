@@ -410,6 +410,7 @@ export default {
       jwb28: "",
       jwb29: "",
       jwb30: "",
+      no_pendaftaran: "",
       rest:[
         2,5,4,4,5,4,5,1,5,3,
         5,4,5,3,2,3,2,3,4,4,
@@ -427,26 +428,84 @@ export default {
     };
   },
 
-  methods: {
-    //method "store"
+    mounted() {
+    this.no_pendaftaran = localStorage.no_pendaftaran
+    console.log("run on tiu test");
+    // let endPoint = `/api/papiuserresult/no_pendaftaran=${this.no_pendaftaran}`;
+    // this.$axios
+    //   .$get(endPoint)
+    //   .then((response) => {
+    //     if (res.data.status == "ok") {
+    //       this.status = "disable";
+    //     }
+    //     else{
+    //       this.status = "enable"
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.response.data);
+    //   });
+  },
+
+ methods: {
     async store(e) {
       e.preventDefault();
-console.log("hitung");
- for (let i = 1; i <= 30; i++) {
-   console.log(this.jwb)
- }
-      // await this.$axios
-      //   .post("/api/provinsi", {
-      //     provinsi: this.provinsi.provinsi,
-      //   })
-      //   .then(() => {
-      //     this.$router.push({
-      //       name: "provinsi",
-      //     });
-      //   })
-      //   .catch((error) => {
-      //     this.validation = error.response.data;
-      //   });
+      var obj = {
+        no_pendaftaran: [],
+      };
+      obj.no_pendaftaran.push("456789123");
+      let datax = {
+        data: [
+          {
+            no_pendaftaran: this.no_pendaftaran,
+            jwb1: this.jwb1,
+            jwb2: this.jwb2,
+            jwb3: this.jwb3,
+            jwb4: this.jwb4,
+            jwb5: this.jwb5,
+            jwb6: this.jwb6,
+            jwb7: this.jwb7,
+            jwb8: this.jwb8,
+            jwb9: this.jwb9,
+            jwb10: this.jwb10,
+            jwb11: this.jwb11,
+            jwb12: this.jwb12,
+            jwb13: this.jwb13,
+            jwb14: this.jwb14,
+            jwb15: this.jwb15,
+            jwb16: this.jwb16,
+            jwb17: this.jwb17,
+            jwb18: this.jwb18,
+            jwb19: this.jwb19,
+            jwb20: this.jwb20,
+            jwb21: this.jwb21,
+            jwb22: this.jwb22,
+            jwb23: this.jwb23,
+            jwb24: this.jwb24,
+            jwb25: this.jwb25,
+            jwb26: this.jwb26,
+            jwb27: this.jwb27,
+            jwb28: this.jwb28,
+            jwb29: this.jwb29,
+            jwb30: this.jwb30
+          },
+        ],
+      };
+
+      await this.$axios({
+        method: "post",
+        headers: { "content-type": "application/json" },
+        url: "/api/tiu",
+        data: datax,
+      })
+        .then(() => {
+          this.$router.push({
+            name: "tiu",
+          });
+        })
+        .catch((error) => {
+          this.validation = error.response.data;
+        });
     },
   },
 };
