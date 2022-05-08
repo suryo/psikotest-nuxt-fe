@@ -9,7 +9,7 @@
                 Pada test ini terdapat 90 pertanyaan. Anda harus... JANGAN TEKAN
                 TOMBOL SEBELUM DI INSTRUKSIKAN
               </h4>
-               <img src="~/assets/img/logo4.png" />
+              <img src="~/assets/img/logo4.png" />
             </div>
             <div class="card-body">
               <div class="form-group">
@@ -24,9 +24,16 @@
                 <!-- <button type="submit" class="btn btn-primary">
                       Next
                     </button> -->
-                <button @click="goToTest()" class="btn btn-primary">
-                  Next
-                </button>
+                <div v-if="this.status === 'enable'">
+                  <button @click="goToTest()" class="btn btn-primary">
+                    Next
+                  </button>
+                </div>
+                <div v-else>
+                  {{ this.status }}
+                  anda sudah mengerjakan test ini
+                </div>
+
                 <!-- </div> -->
               </div>
             </div>
@@ -43,6 +50,7 @@ export default {
   components: {},
   data() {
     return {
+      status: "",
       password: "",
     };
   },
@@ -50,6 +58,28 @@ export default {
     check: function () {
       console.log(this.password);
     },
+  },
+
+  mounted() {
+    this.no_pendaftaran = localStorage.no_pendaftaran;
+    console.log("coba");
+    let endPoint = `/api/papiuserresult/?no_pendaftaran=${this.no_pendaftaran}`;
+    this.$axios
+      .$get(endPoint)
+      .then((res) => {
+        if (res.data.status == "ok") {
+          console.log("tombol disable");
+          this.status = "disable";
+        } else {
+          console.log("tombol enable");
+          this.status = "enable";
+        }
+      })
+      .catch((error) => {
+        console.log("tombol gj");
+        this.status = "enable";
+        console.log(error.response.data);
+      });
   },
   methods: {
     goToTest() {

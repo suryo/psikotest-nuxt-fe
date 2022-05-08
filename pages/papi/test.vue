@@ -1231,6 +1231,7 @@ export default {
       jwb89: "",
       jwb90: "",
       no_pendaftaran: "",
+      status: "",
       provinsi: {
         provinsi: "",
       },
@@ -1240,29 +1241,29 @@ export default {
   },
 
   mounted() {
-    this.no_pendaftaran = localStorage.no_pendaftaran
+    this.no_pendaftaran = localStorage.no_pendaftaran;
     console.log("coba");
-    // this.$axios
-    //   .get("/api/papi")
-    //   .then((response) => {
-    //     //assign response ke state "posts"
-    //     this.posts = response.data.data;
-    //     console.log(this.posts);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.response.data);
-    //   });
+    let endPoint = `/api/papiuserresult/no_pendaftaran=${this.no_pendaftaran}`;
+    this.$axios
+      .$get(endPoint)
+      .then((response) => {
+        if (res.data.status == "ok") {
+          this.status = "disable";
+        } else {
+          this.status = "enable";
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
   },
 
   methods: {
-    //method "store"
     async store(e) {
       e.preventDefault();
-
       var obj = {
         no_pendaftaran: [],
       };
-
       obj.no_pendaftaran.push("456789123");
       let datax = {
         data: [
@@ -1307,28 +1308,28 @@ export default {
             jwb37: this.jwb37,
             jwb38: this.jwb38,
             jwb39: this.jwb39,
-            jwb40: this.jwb40,            
-            jwb41: this.jwb41,            
-            jwb42: this.jwb42,            
-            jwb43: this.jwb43,            
-            jwb44: this.jwb44,            
-            jwb45: this.jwb45,            
-            jwb46: this.jwb46,            
-            jwb47: this.jwb47,            
-            jwb48: this.jwb48,            
-            jwb49: this.jwb49,            
-            jwb50: this.jwb50,            
-            jwb51: this.jwb51,            
-            jwb52: this.jwb52,            
-            jwb53: this.jwb53,            
-            jwb54: this.jwb54,            
-            jwb55: this.jwb55,            
-            jwb56: this.jwb56,            
-            jwb57: this.jwb57,            
-            jwb58: this.jwb58,            
-            jwb59: this.jwb59,            
-            jwb60: this.jwb60,            
-            jwb61: this.jwb61,            
+            jwb40: this.jwb40,
+            jwb41: this.jwb41,
+            jwb42: this.jwb42,
+            jwb43: this.jwb43,
+            jwb44: this.jwb44,
+            jwb45: this.jwb45,
+            jwb46: this.jwb46,
+            jwb47: this.jwb47,
+            jwb48: this.jwb48,
+            jwb49: this.jwb49,
+            jwb50: this.jwb50,
+            jwb51: this.jwb51,
+            jwb52: this.jwb52,
+            jwb53: this.jwb53,
+            jwb54: this.jwb54,
+            jwb55: this.jwb55,
+            jwb56: this.jwb56,
+            jwb57: this.jwb57,
+            jwb58: this.jwb58,
+            jwb59: this.jwb59,
+            jwb60: this.jwb60,
+            jwb61: this.jwb61,
             jwb62: this.jwb62,
             jwb63: this.jwb63,
             jwb64: this.jwb64,
@@ -1357,7 +1358,7 @@ export default {
             jwb87: this.jwb87,
             jwb88: this.jwb88,
             jwb89: this.jwb89,
-            jwb90: this.jwb90
+            jwb90: this.jwb90,
           },
         ],
       };
