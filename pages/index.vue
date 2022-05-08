@@ -1,9 +1,16 @@
 <template>
-  <Tutorial/>
+  <section class="section">
+    This is public page, anyone can access this page
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
-}
+  layout: "front/default",
+  auth: false,
+  components: {},
+  data() {
+    return {};
+  },
+};
 </script>

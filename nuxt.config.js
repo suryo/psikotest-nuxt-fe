@@ -21,6 +21,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~assets/css/tailwind.css",
+    "@fortawesome/fontawesome-svg-core/styles.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -32,8 +34,20 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+   // https://go.nuxtjs.dev/tailwindcss
+   "bootstrap-vue/nuxt",
+   "@nuxtjs/tailwindcss",
+   ['@nuxtjs/fontawesome', {
+     component: 'fa',
+     suffix: true,
+     icons: {
+       solid: true,
+       regular: true,
+       brands: true
+     }
+   }],
+   "@nuxtjs/composition-api/module",
+   ["@nuxtjs/eslint-module", { fix: true }]
   ],
 
   axios: {
